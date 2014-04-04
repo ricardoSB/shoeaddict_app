@@ -7,11 +7,11 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @shoe.picture %>
+  <%= image_tag(@shoe.picture_url, :width => 600) if @shoe.has_picture_upload? %>
 </p>
 
-<!-- < %= @shoe.picture %> commented line -->
-<%= image_tag(@shoe.picture_url, :width => 400) if @shoe.picture.present? %>
+<!-- <%= @shoe.picture %> commented line -->
+<!-- <%= image_tag(@shoe.picture_url, :width => 400) if @shoe.picture.present? %> -->
 
 <p>
   <strong>Designer:</strong>
